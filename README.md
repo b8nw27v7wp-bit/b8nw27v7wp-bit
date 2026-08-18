@@ -46,11 +46,12 @@
 
 ### 🔧 [repo-ai-cli](https://github.com/b8nw27v7wp-bit/repo-ai-cli)
 
-> AI 驱动的仓库助手 CLI — npm 包 `repo-ai-cli`，一条命令搞定仓库杂活
+> AI 驱动的仓库助手 CLI — npm 包 `repo-ai-cli`，21 条命令覆盖仓库全流程
 
-- **8 条命令**：双语 README、Conventional Commits、CHANGELOG、代码审查、代码解释、PR 描述、项目脚手架、配置持久化
+- **AI 工作流**：双语 README、Conventional Commits、CHANGELOG、代码审查、代码解释、PR 描述、文档翻译、单元测试、重构建议、bug 定位、代码库问答（RAG）
+- **离线工具集**：密钥扫描、环境体检、.gitignore / LICENSE 生成、仓库统计、依赖解析、项目脚手架、git 钩子安装、语义化版本发布
 - BYOK 模式，支持 **8+ 家 LLM 提供商**（DeepSeek / OpenAI / Kimi / GLM / 通义千问 / MiniMax / Grok / 硅基流动）及任意 OpenAI 兼容端点，Key 不上传
-- 智能 Token 预算、流式输出、`--json` 脚本友好；**118 项测试**全通过（GitHub Actions CI）
+- 智能 Token 预算、流式输出、`--json` 脚本友好；**173 项测试**全通过（GitHub Actions CI）
 - 技术栈：`TypeScript` `Node.js` `CLI` `commander` `clack`
 
 ### 🤖 [AgentOrb](https://github.com/b8nw27v7wp-bit/agent-orchestrator)
