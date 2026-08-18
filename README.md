@@ -46,12 +46,12 @@
 
 ### 🔧 [repo-ai-cli](https://github.com/b8nw27v7wp-bit/repo-ai-cli)
 
-> AI 驱动的仓库助手 CLI 工具
+> AI 驱动的仓库助手 CLI — npm 包 `repo-ai-cli`，一条命令搞定仓库杂活
 
-- 一键生成双语 README、Conventional Commits 提交信息
-- BYOK 模式，支持 **8+ LLM 提供商**（OpenAI / DeepSeek / Claude / Gemini 等），Key 不上传
-- 零配置开箱即用，交互式引导
-- 技术栈：`TypeScript` `Node.js` `CLI` `OpenAI API`
+- **8 条命令**：双语 README、Conventional Commits、CHANGELOG、代码审查、代码解释、PR 描述、项目脚手架、配置持久化
+- BYOK 模式，支持 **8+ 家 LLM 提供商**（DeepSeek / OpenAI / Kimi / GLM / 通义千问 / MiniMax / Grok / 硅基流动）及任意 OpenAI 兼容端点，Key 不上传
+- 智能 Token 预算、流式输出、`--json` 脚本友好；**118 项测试**全通过（GitHub Actions CI）
+- 技术栈：`TypeScript` `Node.js` `CLI` `commander` `clack`
 
 ### 🤖 [AgentOrb](https://github.com/b8nw27v7wp-bit/agent-orchestrator)
 
