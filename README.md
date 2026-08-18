@@ -64,6 +64,18 @@
 - **15 项测试**全通过（Node.js 内置测试框架，零测试依赖）
 - 技术栈：`TypeScript` `Node.js` `CLI` `子进程编排`
 
+### 📚 [DocRAG](https://github.com/b8nw27v7wp-bit/doc-rag)
+
+> 本地优先的 AI 文档问答 — 文档不出设备 · 零嵌入成本 · 全离线可选
+
+- 上传 txt / md / pdf / docx，文档解析、嵌入、向量检索**全部在本机完成**，数据不出设备一步
+- **混合检索**：向量语义 + BM25 关键词（中文 bigram 分词）RRF 融合，专有名词/精确术语不漏检，引用面板双分数标注
+- **多轮对话会话**：上下文自动保存、历史注入、标题自动生成；每会话可限定检索文档范围，多主题互不干扰
+- BYOK 任意 OpenAI 兼容模型（DeepSeek / GLM / Kimi / Ollama **全离线**），Key 仅存浏览器、不落服务器
+- 零原生依赖（Node 内置 `node:sqlite`）、CLI 批量导入、Docker 一键部署、可选访问密码
+- **39 项测试**全通过 + 端到端验收脚本（上传→检索→会话全流程）
+- 技术栈：`Next.js` `TypeScript` `SQLite` `RAG` `BM25` `Docker`
+
 ---
 
 > 💡 *Building tools that people actually use.*
