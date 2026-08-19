@@ -2,7 +2,7 @@
 
 计算机科学与技术本科生，专注于 **全栈开发** 和 **AI 工具链**。
 
-喜欢做有实际用户价值的工具类产品，从需求到上线全流程独立完成。
+喜欢做有实际用户价值的工具类产品，从需求到上线全流程独立完成，多个项目已发布 npm / Greasy Fork。
 
 ## 🛠️ Tech Stack
 
@@ -45,15 +45,12 @@
 - 技术栈：`Next.js` `React` `MySQL` `NextAuth` `Docker` `DeepSeek`
 
 ### 🔧 [repo-ai-cli](https://github.com/b8nw27v7wp-bit/repo-ai-cli)
-
-> AI 驱动的仓库助手 CLI — npm 包 `repo-ai-cli`，21 条命令覆盖仓库全流程
-
+> AI 驱动的仓库助手 CLI — npm 包 `repo-ai-cli`，v0.6.0 · 23 条命令覆盖仓库全流程
 - **AI 工作流**：双语 README、Conventional Commits、CHANGELOG、代码审查、代码解释、PR 描述、文档翻译、单元测试、重构建议、bug 定位、代码库问答（RAG）
-- **离线工具集**：密钥扫描、环境体检、.gitignore / LICENSE 生成、仓库统计、依赖解析、项目脚手架、git 钩子安装、语义化版本发布
-- BYOK 模式，支持 **8+ 家 LLM 提供商**（DeepSeek / OpenAI / Kimi / GLM / 通义千问 / MiniMax / Grok / 硅基流动）及任意 OpenAI 兼容端点，Key 不上传
-- 智能 Token 预算、流式输出、`--json` 脚本友好；**173 项测试**全通过（GitHub Actions CI）
+- **离线工具集**：密钥扫描、环境体检、.gitignore / LICENSE / README 徽章 / CONTRIBUTING 生成、仓库统计、依赖审计（`--outdated` / `--audit`）、项目脚手架、git 钩子安装、语义化版本发布
+- BYOK 模式，支持 **13 家 LLM 提供商**（DeepSeek / OpenAI / Kimi / GLM / 通义千问 / MiniMax / Grok / 硅基流动 / Ollama 本地免 key / OpenRouter / Groq / 火山方舟 / Gemini）及任意 OpenAI 兼容端点；多套配置 profiles 一键切换
+- 智能 Token 预算、流式输出、`--json` 脚本友好、`--verbose` 全链路调试日志；**210 项测试**全通过（GitHub Actions CI + Release 自动发布）
 - 技术栈：`TypeScript` `Node.js` `CLI` `commander` `clack`
-
 ### 🤖 [AgentOrb](https://github.com/b8nw27v7wp-bit/agent-orchestrator)
 
 > 多 Agent 编排 CLI —— 统一调度本机多个 AI agent
