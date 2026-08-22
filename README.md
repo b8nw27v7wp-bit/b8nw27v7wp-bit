@@ -63,15 +63,15 @@
 
 ### 📚 [DocRAG](https://github.com/b8nw27v7wp-bit/doc-rag)
 
-> 本地优先的 AI 文档问答 — 文档不出设备 · 零嵌入成本 · 全离线可选
+> 本地优先的 AI 文档问答 — 文档不离机 · 零嵌入成本 · 全链路本地检索 · 全离线可选
 
-- 上传 txt / md / pdf / docx，文档解析、嵌入、向量检索**全部在本机完成**，数据不出设备一步
-- **混合检索**：向量语义 + BM25 关键词（中文 bigram 分词）RRF 融合，专有名词/精确术语不漏检，引用面板双分数标注
-- **多轮对话会话**：上下文自动保存、历史注入、标题自动生成；每会话可限定检索文档范围，多主题互不干扰
-- BYOK 任意 OpenAI 兼容模型（DeepSeek / GLM / Kimi / Ollama **全离线**），Key 仅存浏览器、不落服务器
-- 零原生依赖（Node 内置 `node:sqlite`）、CLI 批量导入、Docker 一键部署、可选访问密码
-- **39 项测试**全通过 + 端到端验收脚本（上传→检索→会话全流程）
-- 技术栈：`Next.js` `TypeScript` `SQLite` `RAG` `BM25` `Docker`
+- 上传 txt / md / pdf / docx / html / csv / tsv，**解析（pdf-parse/mammoth）、结构感知分块（标题层级路径）、上下文检索头、本地嵌入（transformers.js MiniLM 384维）与向量检索全部本机完成**，单文件 SQLite（WAL）零原生依赖
+- **混合检索**：向量余弦 + BM25 中文 bigram 倒排 posting 经 RRF 融合，专有名词不漏检；**多查询改写** + **MMR 去冗余** + **邻块上下文扩展** + **IVF 近似加速**（2000 块起，滑窗均值池化修复 128-token 截断）
+- **多轮对话**：历史注入自动存档、标题自动生成（≤24字）、重命名/置顶/搜索/Markdown 导出；按会话限定文档范围；全文搜索切片高亮、批量删除、自动标签/LLM 摘要/一键重嵌入
+- **安全与交付**：VACUUM INTO 一致性备份/安全恢复（文件头校验、pre-restore 快照、WAL 清理）、嵌入模型版本管理与旧块降级、SSRF/限流/密码门（恒定时间比较）、CLI 批量导入、Docker 多阶段预下载模型（TRANSFORMERS_CACHE）、健康检查/OpenAPI
+- BYOK 任意 OpenAI 兼容模型（DeepSeek / GLM / Kimi / Ollama 全离线），Key 仅存浏览器；推理模型 thinking 透传与引用越界自检
+- **168 项单元+路由集成测试**全通过 + `verify-embed` / `verify-api` / `eval-retrieval` 离线评估（Recall/Precision/MRR），CI（audit/lint/test/build）全绿
+- 技术栈：`Next.js 16` `TypeScript` `node:sqlite` `transformers.js` `BM25/RRF/MMR/IVF` `Tailwind` `Docker`
 
 ---
 
